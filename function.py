@@ -1,12 +1,12 @@
 import sqlite3
 import os
 
-conn = sqlite3.connect('Daten/database.db')
+conn = sqlite3.connect('database.db')
 c = conn.cursor()
 
 
 def search_all():
-    conn = sqlite3.connect('Daten/database.db')
+    conn = sqlite3.connect('database.db')
     c = conn.cursor()
     c.execute("SELECT * FROM passwords")
 
@@ -45,7 +45,7 @@ def create_password():
 
 
 def delete_password():
-    conn = sqlite3.connect('Daten/database.db')
+    conn = sqlite3.connect('database.db')
     c = conn.cursor()
     print(conn)
     decision = input("How do you want to delete your passsword (website, username) ")
